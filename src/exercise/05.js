@@ -10,8 +10,8 @@ import {
   updateGridCellState,
 } from '../utils'
 
-const AppStateContext = React.createContext();
-const DispatchContext = React.createContext();
+const AppStateContext = React.createContext()
+const DispatchContext = React.createContext()
 
 const initialGrid = Array.from({length: 100}, () =>
   Array.from({length: 100}, () => Math.random() * 100),
@@ -65,7 +65,7 @@ function useDispatch() {
 }
 
 function Grid() {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const [rows, setRows] = useDebouncedState(50)
   const [columns, setColumns] = useDebouncedState(50)
   const updateGridData = () => dispatch({type: 'UPDATE_GRID'})
@@ -84,7 +84,7 @@ Grid = React.memo(Grid)
 
 function Cell({row, column}) {
   const state = useAppState()
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const cell = state.grid[row][column]
   const handleClick = () => dispatch({type: 'UPDATE_GRID_CELL', row, column})
   return (
@@ -104,7 +104,7 @@ Cell = React.memo(Cell)
 
 function DogNameInput() {
   const state = useAppState()
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const {dogName} = state
 
   function handleChange(event) {

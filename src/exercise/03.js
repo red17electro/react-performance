@@ -32,7 +32,7 @@ function Menu({
 }
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
-Menu = React.memo(Menu);
+Menu = React.memo(Menu)
 // 🐨 Memoize the Menu here using React.memo
 
 function ListItem({
@@ -58,7 +58,7 @@ function ListItem({
   )
 }
 
-ListItem = React.memo(ListItem);
+ListItem = React.memo(ListItem)
 
 function App() {
   const forceRerender = useForceRerender()

@@ -60,7 +60,7 @@ function ListItem({
 function App() {
   const forceRerender = useForceRerender()
   const [inputValue, setInputValue] = React.useState('')
-  const {data: allItems, run} = useAsync({data: [], status: 'pending'});
+  const {data: allItems, run} = useAsync({data: [], status: 'pending'})
 
   React.useEffect(() => {
     run(getItems(inputValue))
